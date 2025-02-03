@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #425bc9, #8d47d4);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+.dark-mode {
+    background: linear-gradient(135deg, #232526, #414345);
+    color: white;
+}
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.dark-mode .todo-container {
+    background: rgba(0, 0, 0, 0.4);
+}
+.text, .select {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+input, button, select {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+input {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+button {
+    cursor: pointer;
+    background: #c93875;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ff4f92;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+}
+li {
+    padding: 12px;
+    margin: 5px auto;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    transition: 0.3s;
+}
+.high { 
+    background-color: rgba(255, 0, 0, 0.8); 
+}
+.medium { 
+    background-color: rgba(255, 255, 0, 0.8); 
+    color: black; 
+}
+.low { 
+    background-color: rgba(0, 128, 0, 0.8); 
+}
+
+.dark-mode .high { 
+    background-color: rgba(200, 50, 50, 0.8); 
+}
+.dark-mode .medium { 
+    background-color: rgba(180, 180, 50, 0.8); color: black; 
+}
+.dark-mode .low { 
+    background-color: rgba(50, 150, 50, 0.8); 
+}
+li.removed {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 0.5s;
+}
